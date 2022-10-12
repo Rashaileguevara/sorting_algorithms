@@ -18,24 +18,27 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
-void print_list(const listint_t *list);
+/* Function prototypes */
 void print_array(const int *array, size_t size);
+void print_list(const listint_t *list);
 
-/*Bubble sort*/
+/* Sorting functions (Mandatory) */
 void bubble_sort(int *array, size_t size);
-
-/* Insertion algorithm methods */
 void insertion_sort_list(listint_t **list);
-void swap(listint_t **list, listint_t *head);
-void swap_at_head(listint_t **head, listint_t *start_node,
-listint_t *swap_node);
-
-/* Selection sort*/
 void selection_sort(int *array, size_t size);
-
-/* Quicksort algorithm methods */
 void quick_sort(int *array, size_t size);
-void quicksort(int *array, int low, int high, size_t size);
-int partition_array(int *array, int low, int high, size_t size);
 
-#endif
+/* Sorting functions (Advanced) */
+void shell_sort(int *array, size_t size);
+void cocktail_sort_list(listint_t **list);
+void counting_sort(int *array, size_t size);
+void merge_sort(int *array, size_t size);
+void heap_sort(int *array, size_t size);
+void radix_sort(int *array, size_t size);
+void bitonic_sort(int *array, size_t size);
+void quick_sort_hoare(int *array, size_t size);
+
+/* Utils */
+void swap(int *arr, int i, int j);
+
+#endif /* SORT_H */
